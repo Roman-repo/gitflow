@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Subsystem uuid="6ea34b77-ff9e-4dab-8fc7-4f6890591d84">
+		<Properties>
+			<Name>Конфигурации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конфигурации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Конфигурации</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Значения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Релизы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Объекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Свойства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаСтруктурыКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаПравилРегистрацииОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Приложения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаСтруктурыКонфигурацииИзФайловXML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Конфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СравнениеМетаданных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СостоянияЗагрузокМетаданных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЗагрузкаМетаданных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыОбщихРеквизитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ЗахватитьОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Конфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеHTTPСервисы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеHTTPСервисыШаблоныURL</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеHTTPСервисыШаблоныURLМетоды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеWebСервисы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеWebСервисыОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеWebСервисыОперацииПараметры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеWSСсылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеБизнесПроцессы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеБоты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеВнешниеИсточникиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеВнешниеИсточникиКубы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеВнешниеИсточникиТаблицы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеВнешниеИсточникиТаблицыИзмерений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеВнешниеИсточникиФункции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеГрафы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеГруппыКоманд</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеЖурналыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеЗадачи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеЗначениеПеречисления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеИзмерения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеКоманды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеКонстанты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеКонфигурация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеКритерииОтбора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеМакеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщиеКартинки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщиеКоманды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщиеМакеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщиеМодули</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщиеРеквизиты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОбщиеФормы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОпределяемыеТипы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОпределяемыйТип</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеОтчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПакетыXDTO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПараметрыСеанса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПараметрыФункциональныхОпций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПерерасчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПеречисления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПланыВидовРасчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПланыВидовХарактеристик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПланыОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПланыСчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПодпискиНаСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПодсистемы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПоследовательности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПризнакиУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеПризнакиУчетаСубконто</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРегистрыБухгалтерии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРегистрыНакопления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРегистрыРасчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРегистрыСведений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРегламентныеЗадания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРеквизиты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРеквизитыАдресации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРесурсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеРоли</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеСправочники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеСтандартныеРеквизиты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеСтандартныеТабличныеЧасти</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеСтили</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеТабличныеЧасти</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеФормы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеФункциональныеОпции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеХранилищаНастроек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеЭлементыСтиля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МетаданныеЯзыки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Теги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЗагрузкуМетаданныхСтарыхВерсий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЗагрузкуМетаданныхСтарыхВерсий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыЗагрузкиМетаданных</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

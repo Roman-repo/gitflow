@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Subsystem uuid="e9249a8a-888b-4af3-b7c3-4f4cc99b22fc">
+		<Properties>
+			<Name>Конвертации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конвертации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Конвертации</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПравилаКонвертацииОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПравилаОбработкиДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Конвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПравилаКонвертацииПредопределенныхДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Алгоритмы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СоставыКонвертаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаПравилОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаПравилКонвертацииСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборДополнительныхУсловий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборКонфигурацийИсточникаПриемника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.НастройкаПравилКонвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникБыстрогоОсвоения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УдалениеКонвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.РабочиеМеста</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПриоритетОбъектовОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПравилаКонвертацииСвойств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияПравил</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыПравил</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ГрупповаяОбработкаЗахваченныхОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДействияПриСовместнойРаботе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СовместнаяРаботаСОбъектами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроверкаКонвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КонвертацияДанныхXDTOВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КонвертацияДанныхXDTOКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КонвертацияДанныхXDTOСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменДаннымиКонвертацияДанныхXDTO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменДаннымиСобытияКонвертацияДанныхXDTO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбновлениеИнформационнойБазыКонвертацияДанныхXDTO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВопросВхождениеВСоставКонвертаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ВыделитьЭлементИзСоставаКонвертаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ЭлементыКонвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыИдентификацииОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыКонвертаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиОграниченияДоступаККонвертациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаКонвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.РабочиеМестаЗарегистрироватьИзменение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.РабочиеМестаЗарегистрироватьНабор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.РабочиеМестаЗарегистрироватьУдаление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ТекущаяКонфигурацияИсточник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ТекущаяКонфигурацияПриемник</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИнформацияОЗахвате</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СнятьЗахватОбъекта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборОбъектаИлиСвойства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ЗахватОбъекта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьФорматXDTO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьФорматXML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.СовместнаяРабота</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ИнформацияОбОбработчиках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИнформацияОбОбработчиках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОбработчиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РазделыДополнительныхМодулей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыВыгрузкиРазделенногоМодуля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КоллекцияПиктограммЭлементыКД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Конвертации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.Полный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолныйРегистрация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолныйРегистрацияКонстанты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолныйРегистрацияНабора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПолныйРегистрацияУдаления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Запросы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>КонвертацииXDTO</Subsystem>
+			<Subsystem>КонвертацииXML</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

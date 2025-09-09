@@ -1,0 +1,1136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Загрузка конвертации XDTO</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШагиЗагрузки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шаги загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаШагиЗагрузкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВыборКонвертации" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор конвертации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор конвертации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыборКонвертацииРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Pages name="ПанельВыборКонвертации" id="5">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель выбор конвертации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель выбор конвертации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельВыборКонвертацииРасширеннаяПодсказка" id="6"/>
+							<ChildItems>
+								<Page name="СтраницаВыборКонвертацииУспешно" id="7">
+									<ExtendedTooltip name="СтраницаВыборКонвертацииУспешноРасширеннаяПодсказка" id="8"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация1" id="13">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="15"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаВыборКонвертацииТекущий" id="9">
+									<ExtendedTooltip name="СтраницаВыборКонвертацииТекущийРасширеннаяПодсказка" id="10"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация2" id="16">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="18"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаВыборКонвертацииПустой" id="11">
+									<ExtendedTooltip name="СтраницаВыборКонвертацииПустойРасширеннаяПодсказка" id="12"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация15" id="19">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация15КонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="21"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="ВыбратьКонвертациюДляЗагрузки" id="22">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыбратьКонвертациюДляЗагрузки</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ВыбратьКонвертациюДляЗагрузкиРасширеннаяПодсказка" id="23">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Конвертация не выбрана</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыборИсточникаЗагрузки" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор источника загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор источника загрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыборИсточникаЗагрузкиРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Pages name="ПанельВыборИсточникаЗагрузки" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель выбор конвертации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель выбор конвертации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельВыборИсточникаЗагрузкиРасширеннаяПодсказка" id="27"/>
+							<ChildItems>
+								<Page name="СтраницаВыборИсточникаЗагрузкиУспешно" id="28">
+									<ExtendedTooltip name="СтраницаВыборИсточникаЗагрузкиУспешноРасширеннаяПодсказка" id="29"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация3" id="30">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="32"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаВыборИсточникаЗагрузкиТекущий" id="33">
+									<ExtendedTooltip name="СтраницаВыборИсточникаЗагрузкиТекущийРасширеннаяПодсказка" id="34"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация4" id="35">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="37"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаВыборИсточникаЗагрузкиПустой" id="38">
+									<ExtendedTooltip name="СтраницаВыборИсточникаЗагрузкиПустойРасширеннаяПодсказка" id="39"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация16" id="40">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация16КонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="Декорация16РасширеннаяПодсказка" id="42"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="НастроитьИсточникЗагрузки" id="43">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НастроитьИсточникЗагрузки</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="НастроитьИсточникЗагрузкиРасширеннаяПодсказка" id="44">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Источник загрузки не настроен</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПросмотрРасхождений" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа просмотр расхождений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа просмотр расхождений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПросмотрРасхожденийРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<Pages name="ПанельПросмотрРасхождений" id="47">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель выбор конвертации</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельПросмотрРасхожденийРасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<Page name="СтраницаПросмотрРасхожденийУспешно" id="49">
+									<ExtendedTooltip name="СтраницаПросмотрРасхожденийУспешноРасширеннаяПодсказка" id="50"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация5" id="51">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="53"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПросмотрРасхожденийТекущий" id="54">
+									<ExtendedTooltip name="СтраницаПросмотрРасхожденийТекущийРасширеннаяПодсказка" id="55"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация6" id="56">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация6КонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="58"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПросмотрРасхожденийПустой" id="59">
+									<ExtendedTooltip name="СтраницаПросмотрРасхожденийПустойРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация17" id="61">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация17КонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="63"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПросмотрРасхожденийДлительнаяОперация" id="68">
+									<ExtendedTooltip name="СтраницаПросмотрРасхожденийДлительнаяОперацияРасширеннаяПодсказка" id="69"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация18" id="70">
+											<Width>2</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация18КонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="72"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="ГруппаКнопкаРасхожденияИСтатус" id="145">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопка расхождения и статус</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопка расхождения и статус</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкаРасхожденияИСтатусРасширеннаяПодсказка" id="146"/>
+							<ChildItems>
+								<Button name="ПосмотретьРасхождения" id="64">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ПосмотретьРасхождения</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Посмотреть расхождения и выбрать загружаемые правила</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ПосмотретьРасхожденияРасширеннаяПодсказка" id="65">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Посмотреть расхождения правил с существующей конвертацией и выбрать правила для загрузки</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<LabelDecoration name="ДекорацияСтатусДлительнойОперацииРасхождения" id="147">
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<ContextMenu name="ДекорацияСтатусДлительнойОперацииРасхожденияКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="ДекорацияСтатусДлительнойОперацииРасхожденияРасширеннаяПодсказка" id="149"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗагрузкаПравил" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа загрузка правил</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа загрузка правил</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗагрузкаПравилРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<Pages name="ПанельЗагрузкаПравил" id="73">
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельЗагрузкаПравилРасширеннаяПодсказка" id="74"/>
+							<ChildItems>
+								<Page name="СтраницаЗагрузкаПравилУспешно" id="75">
+									<ExtendedTooltip name="СтраницаЗагрузкаПравилУспешноРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация7" id="77">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Успешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация7КонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="79"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаЗагрузкаПравилТекущий" id="80">
+									<ExtendedTooltip name="СтраницаЗагрузкаПравилТекущийРасширеннаяПодсказка" id="81"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация8" id="82">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация8КонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="84"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаЗагрузкаПравилПустой" id="85">
+									<ExtendedTooltip name="СтраницаЗагрузкаПравилПустойРасширеннаяПодсказка" id="86"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация19" id="87">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация19КонтекстноеМеню" id="88"/>
+											<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="89"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаЗагрузкаПравилДлительнаяОперация" id="90">
+									<ExtendedTooltip name="СтраницаЗагрузкаПравилДлительнаяОперацияРасширеннаяПодсказка" id="91"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация20" id="92">
+											<Width>2</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация20КонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="94"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="ГруппаЗагрузкаИРезультат" id="138">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа загрузка и результат</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа загрузка и результат</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗагрузкаИРезультатРасширеннаяПодсказка" id="139"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗагрузкаИСтатус" id="150">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа загрузка и статус</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа загрузка и статус</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗагрузкаИСтатусРасширеннаяПодсказка" id="151"/>
+									<ChildItems>
+										<Button name="ЗагрузитьПравилаКонвертации" id="95">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ЗагрузитьПравилаКонвертации</CommandName>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<ExtendedTooltip name="ЗагрузитьПравилаКонвертацииРасширеннаяПодсказка" id="96">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Запустить процесс загрузки правил конвертации</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+										<LabelDecoration name="ДекорацияСтатусДлительнойОперацииЗагрузка" id="152">
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<ContextMenu name="ДекорацияСтатусДлительнойОперацииЗагрузкаКонтекстноеМеню" id="153"/>
+											<ExtendedTooltip name="ДекорацияСтатусДлительнойОперацииЗагрузкаРасширеннаяПодсказка" id="154"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаРезультатЗагрузки" id="140">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа результат загрузки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа результат загрузки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРезультатЗагрузкиРасширеннаяПодсказка" id="141"/>
+									<ChildItems>
+										<InputField name="Конвертация" id="142">
+											<DataPath>Объект.Конвертация</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Создана конвертация</v8:content>
+												</v8:item>
+											</Title>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<ContextMenu name="КонвертацияКонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="КонвертацияРасширеннаяПодсказка" id="144"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОшибкиЗагрузки" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ошибки загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ошибки загрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОшибкиЗагрузкиРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<Pages name="ПанельОшибкиЗагрузки" id="119">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель ошибки загрузки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ПанельОшибкиЗагрузкиРасширеннаяПодсказка" id="120"/>
+							<ChildItems>
+								<Page name="СтраницаОшибкиЗагрузкиТекущий" id="126">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ошибки загрузки текущий</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ошибки загрузки текущий</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаОшибкиЗагрузкиТекущийРасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация12" id="128">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Picture>
+												<xr:Ref>StdPicture.AppearanceCircleRed</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация12КонтекстноеМеню" id="129"/>
+											<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="130"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаОшибкиЗагрузкиПустой" id="131">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ошибки загрузки пустой</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница ошибки загрузки пустой</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаОшибкиЗагрузкиПустойРасширеннаяПодсказка" id="132"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация21" id="133">
+											<Width>2</Width>
+											<Height>2</Height>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация21КонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="Декорация21РасширеннаяПодсказка" id="135"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="ПоказатьОшибкиЗагрузки" id="136">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПоказатьОшибкиЗагрузки</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ПоказатьОшибкиЗагрузкиРасширеннаяПодсказка" id="137">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вывести список ошибок при загрузке данных</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНачатьЗаново" id="155">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа начать заново</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа начать заново</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНачатьЗановоРасширеннаяПодсказка" id="156"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация9" id="157">
+							<Picture>
+								<xr:Ref>StdPicture.NewWindow</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация9КонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="159"/>
+						</PictureDecoration>
+						<Button name="НачатьПроцессЗагрузкиЗаново" id="160">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НачатьПроцессЗагрузкиЗаново</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="НачатьПроцессЗагрузкиЗановоРасширеннаяПодсказка" id="161">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Очистить все параметры и начать настройку заново</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаМодуляМенеджера</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТекущийЭтап" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий этап</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Этапы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Название" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Кнопка" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Группа" id="2">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Панель" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтраницаУспешно" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтраницаТекущий" id="6">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтраницаПустой" id="7">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Основное" id="8">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Используется" id="9">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтраницаДлительнаяОперация" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница длительная операция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Недоступен" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Недоступен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИмяНовойКонвертации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя новой конвертации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяНовойКонфигурации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя новой конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьОшибки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилищаРезультата" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища результата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружаютсяМетаданные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружаются метаданные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ошибки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлыДляОбработкиСервер" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы для обработки сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ИдентификаторХраненияФайлов" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор хранения файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СравниваютсяПравила" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравниваются правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравилаЗагружены" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила загружены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныеРасхождения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные расхождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КоличествоКаталоговВОбработке" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество каталогов в обработке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяКоманда" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая команда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяВременногоКаталогаФайлов" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя временного каталога файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогрессЗадания" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогресс задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УстановленаБлокировкаКонвертации" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установлена блокировка конвертации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьКонвертациюДляЗагрузки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать конвертацию для загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать конвертацию для загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьКонвертациюДляЗагрузки</Action>
+		</Command>
+		<Command name="НастроитьИсточникЗагрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить источник загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить источник загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьИсточникЗагрузки</Action>
+		</Command>
+		<Command name="ПосмотретьРасхождения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть расхождения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть расхождения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПосмотретьРасхождения</Action>
+		</Command>
+		<Command name="ЗагрузитьПравилаКонвертации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить правила конвертации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить правила конвертации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПравилаКонвертации</Action>
+		</Command>
+		<Command name="ПоказатьОшибкиЗагрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать ошибки загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать ошибки загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьОшибкиЗагрузки</Action>
+		</Command>
+		<Command name="НачатьПроцессЗагрузкиЗаново" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать процесс загрузки заново</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать процесс загрузки заново</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьПроцессЗагрузкиЗаново</Action>
+		</Command>
+	</Commands>
+</Form>

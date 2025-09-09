@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗахватить" id="15">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Захватить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Захватить объект</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗахватитьРасширеннаяПодсказка" id="16"/>
+			</Button>
+			<Button name="ФормаСнятьЗахватСЗаписью" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СнятьЗахватСЗаписью</CommandName>
+				<ExtendedTooltip name="ФормаСнятьЗахватСЗаписьюРасширеннаяПодсказка" id="18"/>
+			</Button>
+			<Button name="ФормаОтменитьЗахват" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтменитьЗахват</CommandName>
+				<ExtendedTooltip name="ФормаОтменитьЗахватРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="СсылкаНаОбъект" id="7">
+			<DataPath>ПредставлениеОбъектов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СсылкаНаОбъектКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СсылкаНаОбъектРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаГоризонтальная" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальнаяРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="Пользователь" id="4">
+					<DataPath>Пользователь</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ДатаЗахвата" id="12">
+					<DataPath>Дата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ДатаЗахватаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДатаЗахватаРасширеннаяПодсказка" id="14"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="1">
+			<DataPath>Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="3"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СсылкаНаОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаКонвертацииПредопределенныхДанных</v8:Type>
+				<v8:Type>cfg:CatalogRef.ПравилаКонвертацииОбъектов</v8:Type>
+				<v8:Type>cfg:CatalogRef.ПравилаРегистрацииОбъектов</v8:Type>
+				<v8:Type>cfg:CatalogRef.Алгоритмы</v8:Type>
+				<v8:Type>cfg:CatalogRef.Запросы</v8:Type>
+				<v8:Type>cfg:CatalogRef.ПравилаОбработкиДанных</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Комментарий" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1000</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пользователь" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Действие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Дата" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкиНаОбъект" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылки на объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПредставлениеОбъектов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Захватить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Захватить объект</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Захватить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Захватить</Action>
+		</Command>
+		<Command name="СнятьЗахватСЗаписью" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять захват с записью объекта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять захват с записью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьЗахватИЗаписать</Action>
+		</Command>
+		<Command name="ОтменитьЗахват" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить захват с откатом изменений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить захват</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьЗахват</Action>
+		</Command>
+	</Commands>
+</Form>

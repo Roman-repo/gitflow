@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>ReadChanges</ExcludedCommand>
+		<ExcludedCommand>WriteChanges</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="5"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаВсеНастройки" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа все настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВсеНастройкиРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<CheckBoxField name="ДляПубликации" id="7">
+					<DataPath>Объект.ДляПубликации</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДляПубликацииКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДляПубликацииРасширеннаяПодсказка" id="9"/>
+				</CheckBoxField>
+				<UsualGroup name="БлокОтбораПоКонвертациям" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Блок отбора по конвертациям</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="БлокОтбораПоКонвертациямРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<RadioButtonField name="ВсеКонвертации" id="37">
+							<DataPath>РежимОтправкиКонвертаций</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправлять данные по всем конвертациям</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВсеКонвертации</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВсеКонвертацииКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ВсеКонвертацииРасширеннаяПодсказка" id="39"/>
+							<Events>
+								<Event name="OnChange">ВсеКонвертацииПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<RadioButtonField name="ВыбранныеОрганизации" id="40">
+							<DataPath>РежимОтправкиКонвертаций</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправлять данные по выбранным конвертациям</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВыбранныеКонвертации</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВыбранныеОрганизацииКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ВыбранныеОрганизацииРасширеннаяПодсказка" id="42"/>
+							<Events>
+								<Event name="OnChange">ВыбранныеКонвертацииПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаБлокИнформированияОВыбранныхКонвертациях" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа блок информирования о выбранных конвертациях</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаБлокИнформированияОВыбранныхКонвертацияхРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступБлокаИнформированияОВыбранныхОрганизациях" id="45">
+									<Width>1</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация отступ блока информирования о выбранных организациях</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОтступБлокаИнформированияОВыбранныхОрганизацияхКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ДекорацияОтступБлокаИнформированияОВыбранныхОрганизацияхРасширеннаяПодсказка" id="47"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаВыборКонвертаций" id="48">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа выбор конвертаций</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВыборКонвертацийРасширеннаяПодсказка" id="49"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияВыбранныеКонвертации" id="50">
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Конвертации не выбраны&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияВыбранныеКонвертацииКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="ДекорацияВыбранныеКонвертацииРасширеннаяПодсказка" id="52"/>
+										</LabelDecoration>
+										<Button name="ВыбратьКонвертации" id="53">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ВыбратьКонвертации</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Изменить</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ВыбратьКонвертацииРасширеннаяПодсказка" id="54"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.Полный</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РежимОтправкиКонвертаций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим отправки конвертаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьКонвертации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать конвертации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать конвертации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьКонвертации</Action>
+		</Command>
+	</Commands>
+</Form>

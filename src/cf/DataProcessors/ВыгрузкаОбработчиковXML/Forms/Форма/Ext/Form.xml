@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСформироватьМодуль" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьМодуль</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьМодульРасширеннаяПодсказка" id="8"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Конвертация" id="1">
+			<DataPath>Объект.Конвертация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceParameters>
+				<app:item name="Отбор.ТипКонвертации">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыКонвертаций.EnumValue.XML</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="КонвертацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КонвертацияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<CheckBoxField name="ЭтоВыгрузка" id="4">
+			<DataPath>Объект.ЭтоВыгрузка</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид модуля отладки обработчиков</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Tumbler</CheckBoxType>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>БЛ=загрузка; БИ=выгрузка</v8:content>
+				</v8:item>
+			</EditFormat>
+			<ContextMenu name="ЭтоВыгрузкаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ЭтоВыгрузкаРасширеннаяПодсказка" id="6"/>
+		</CheckBoxField>
+		<CheckBoxField name="ТолькоИспользуемые" id="9">
+			<DataPath>Объект.ТолькоИспользуемые</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать только используемые обработчики</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТолькоИспользуемыеКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ТолькоИспользуемыеРасширеннаяПодсказка" id="11"/>
+		</CheckBoxField>
+		<TextDocumentField name="ТекстМодуля" id="12">
+			<DataPath>ТекстМодуля</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ТекстМодуляКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ТекстМодуляРасширеннаяПодсказка" id="14"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВыгрузкаОбработчиковXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТекстМодуля" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст модуля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьМодуль" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать модуль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать модуль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьМодуль</Action>
+		</Command>
+	</Commands>
+</Form>

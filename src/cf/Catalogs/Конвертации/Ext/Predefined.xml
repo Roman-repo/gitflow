@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.19">
+	<Item id="056b16e3-7895-439e-8b76-d2cec1b600f4">
+		<Name>ФорматXDTO</Name>
+		<Code/>
+		<Description>Формат XDTO</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="4bfcf47d-5ae2-43e7-94f2-aa54a53d97cd">
+		<Name>ФорматXML</Name>
+		<Code/>
+		<Description>Формат XML</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+</PredefinedData>

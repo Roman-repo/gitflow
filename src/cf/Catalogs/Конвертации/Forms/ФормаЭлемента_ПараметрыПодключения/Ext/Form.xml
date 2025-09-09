@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Параметры подключения к информационной базе</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="ВидБазы" id="7">
+			<DataPath>Объект.ВидБазы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файловая</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Клиент-серверная</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВидБазыКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидБазыРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ВидБазыПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<InputField name="ПолноеИмяФайловойБазы" id="10">
+			<DataPath>Объект.ПолноеИмяФайловойБазы</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог информационной базы</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПолноеИмяФайловойБазыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПолноеИмяФайловойБазыРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="StartChoice">ПолноеИмяФайловойБазыНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="СерверБазыДанных" id="13">
+			<DataPath>Объект.СерверБазыДанных</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СерверБазыДанныхКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СерверБазыДанныхРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ИмяБазыДанных" id="16">
+			<DataPath>Объект.ИмяБазыДанных</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяБазыДанныхКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИмяБазыДанныхРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ПользовательБазыДанных" id="1">
+			<DataPath>Объект.ПользовательБазыДанных</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПользовательБазыДанныхКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПользовательБазыДанныхРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ПарольПользователя" id="4">
+			<DataPath>Объект.ПарольПользователя</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПарольПользователяКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПарольПользователяРасширеннаяПодсказка" id="6"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Конвертации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

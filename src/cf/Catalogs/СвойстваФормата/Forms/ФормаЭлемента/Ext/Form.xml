@@ -1,0 +1,1030 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="4">
+			<DataPath>Объект.Owner</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект формата</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ВладелецПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа свойств</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаСтатус" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа статус</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтатусРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<RadioButtonField name="СтатусСвойства" id="45">
+					<DataPath>СтатусСвойства</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>RadioButtons</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Самостоятельное</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Из общей табличной части</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Из группы общих свойств</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Из ключевых свойств</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="СтатусСвойстваКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="СтатусСвойстваРасширеннаяПодсказка" id="47"/>
+				</RadioButtonField>
+				<Button name="ОткрытьОбщееСвойство" id="16">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОткрытьОбщееСвойство</CommandName>
+					<ExtendedTooltip name="ОткрытьОбщееСвойствоРасширеннаяПодсказка" id="17"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТипСвойства" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип свойства</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипСвойстваРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<RadioButtonField name="ТипВариант" id="42">
+					<DataPath>ТипВариант</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Из типов формата</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Простой тип</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ключевые свойства</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипВариантКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ТипВариантРасширеннаяПодсказка" id="44"/>
+					<Events>
+						<Event name="OnChange">ТипВариантПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<CheckBoxField name="ВозможноПустое" id="29">
+					<DataPath>ВозможноПустое</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возможно пустое</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВозможноПустоеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВозможноПустоеРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<InputField name="НижняяГраница" id="164">
+					<DataPath>Объект.НижняяГраница</DataPath>
+					<ContextMenu name="НижняяГраницаКонтекстноеМеню" id="165"/>
+					<ExtendedTooltip name="НижняяГраницаРасширеннаяПодсказка" id="166"/>
+				</InputField>
+				<InputField name="Порядок" id="32">
+					<DataPath>Объект.Порядок</DataPath>
+					<ContextMenu name="ПорядокКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТипПростой" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип простой</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>DontUse</ThroughAlign>
+			<ExtendedTooltip name="ГруппаТипПростойРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="ТипПростогоТипа" id="54">
+					<DataPath>ТипПростогоТипа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<DropListButton>true</DropListButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Булево</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Дата</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Строка</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Число</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Прочее</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипПростогоТипаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ТипПростогоТипаРасширеннаяПодсказка" id="56"/>
+					<Events>
+						<Event name="OnChange">ТипПростогоТипаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Pages name="ТипыПростые" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы простые</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ТипыПростыеРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<Page name="ТипЧисло" id="76">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип число</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ТипЧислоРасширеннаяПодсказка" id="77"/>
+							<ChildItems>
+								<InputField name="ДлинаПростогоТипа" id="57">
+									<DataPath>ДлинаПростогоТипа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длина</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДлинаПростогоТипаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ДлинаПростогоТипаРасширеннаяПодсказка" id="59"/>
+									<Events>
+										<Event name="OnChange">ДлинаПростогоТипаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТочностьПростогоТипа" id="60">
+									<DataPath>ТочностьПростогоТипа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Точность</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТочностьПростогоТипаКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ТочностьПростогоТипаРасширеннаяПодсказка" id="62"/>
+									<Events>
+										<Event name="OnChange">ТочностьПростогоТипаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="ТипСтрока" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип строка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ТипСтрокаРасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<InputField name="МинимальнаяДлинаСтроки" id="139">
+									<DataPath>МинимальнаяДлинаСтроки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Мин.длина</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МинимальнаяДлинаСтрокиКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="МинимальнаяДлинаСтрокиРасширеннаяПодсказка" id="141"/>
+									<Events>
+										<Event name="OnChange">ДлинаПростогоТипаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДлинаПростогоТипа1" id="83">
+									<DataPath>ДлинаПростогоТипа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Макс. длина</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДлинаПростогоТипа1КонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ДлинаПростогоТипа1РасширеннаяПодсказка" id="85"/>
+									<Events>
+										<Event name="OnChange">ДлинаПростогоТипаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="НеограниченнаяДлина" id="63">
+									<DataPath>НеограниченнаяДлина</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеограниченнаяДлинаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="НеограниченнаяДлинаРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="OnChange">НеограниченнаяДлинаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<InputField name="Тип" id="10">
+					<DataPath>Объект.Тип</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТипКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТипИзФормата" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип из формата</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипИзФорматаРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<Pages name="ТипФормат" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип формат</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ТипФорматРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<Page name="ФорматОдиночный" id="91">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Формат одиночный</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФорматОдиночныйРасширеннаяПодсказка" id="92"/>
+							<ChildItems>
+								<InputField name="ТипФорматаСсылка" id="66">
+									<DataPath>ТипФорматаСсылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">ВерсияФормата</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТипФорматаСсылкаКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ТипФорматаСсылкаРасширеннаяПодсказка" id="68"/>
+									<Events>
+										<Event name="OnChange">ТипФорматаСсылкаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="ФорматМножественный" id="93">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Формат множественный</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФорматМножественныйРасширеннаяПодсказка" id="94"/>
+							<ChildItems>
+								<Table name="ТипФорматаСписок" id="98">
+									<Representation>List</Representation>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТипФорматаСписок</DataPath>
+									<RowPictureDataPath>ТипФорматаСписок.Picture</RowPictureDataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип формата список</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТипФорматаСписокКонтекстноеМеню" id="99"/>
+									<AutoCommandBar name="ТипФорматаСписокКоманднаяПанель" id="100">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТипФорматаСписокРасширеннаяПодсказка" id="101"/>
+									<SearchStringAddition name="ТипФорматаСписокСтрокаПоиска" id="102">
+										<AdditionSource>
+											<Item>ТипФорматаСписок</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТипФорматаСписокСтрокаПоискаКонтекстноеМеню" id="103"/>
+										<ExtendedTooltip name="ТипФорматаСписокСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТипФорматаСписокСостояниеПросмотра" id="105">
+										<AdditionSource>
+											<Item>ТипФорматаСписок</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТипФорматаСписокСостояниеПросмотраКонтекстноеМеню" id="106"/>
+										<ExtendedTooltip name="ТипФорматаСписокСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТипФорматаСписокУправлениеПоиском" id="108">
+										<AdditionSource>
+											<Item>ТипФорматаСписок</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТипФорматаСписокУправлениеПоискомКонтекстноеМеню" id="109"/>
+										<ExtendedTooltip name="ТипФорматаСписокУправлениеПоискомРасширеннаяПодсказка" id="110"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТипФорматаСписокЗначение" id="111">
+											<DataPath>ТипФорматаСписок.Value</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТипФорматаСписокЗначениеКонтекстноеМеню" id="112"/>
+											<ExtendedTooltip name="ТипФорматаСписокЗначениеРасширеннаяПодсказка" id="113"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<CheckBoxField name="СоставнойТип" id="95">
+					<DataPath>Объект.СоставнойТип</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Составной тип</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="СоставнойТипКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="СоставнойТипРасширеннаяПодсказка" id="97"/>
+					<Events>
+						<Event name="OnChange">МножественныйСоставПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКлючевоеСвойство" id="69">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ключевое свойство</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКлючевоеСвойствоРасширеннаяПодсказка" id="70"/>
+			<ChildItems>
+				<Pages name="ТипКлючевогоСвойства" id="114">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип ключевого свойства</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ТипКлючевогоСвойстваРасширеннаяПодсказка" id="115"/>
+					<ChildItems>
+						<Page name="ТипОдиночный" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип одиночный</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТипОдиночныйРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<InputField name="ТипКлючевоеСвойство" id="71">
+									<DataPath>ТипКлючевоеСвойство</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="ТипКлючевоеСвойствоКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ТипКлючевоеСвойствоРасширеннаяПодсказка" id="73"/>
+									<Events>
+										<Event name="OnChange">ТипКлючевоеСвойствоПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="ТипМножественный" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип множественный</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ТипМножественныйРасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<Table name="ТипКлючевоеСвойствоСписок" id="123">
+									<Representation>List</Representation>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТипКлючевоеСвойствоСписок</DataPath>
+									<RowPictureDataPath>ТипКлючевоеСвойствоСписок.Picture</RowPictureDataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТипКлючевоеСвойствоСписокКонтекстноеМеню" id="124"/>
+									<AutoCommandBar name="ТипКлючевоеСвойствоСписокКоманднаяПанель" id="125">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТипКлючевоеСвойствоСписокРасширеннаяПодсказка" id="126"/>
+									<SearchStringAddition name="ТипКлючевоеСвойствоСписокСтрокаПоиска" id="127">
+										<AdditionSource>
+											<Item>ТипКлючевоеСвойствоСписок</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТипКлючевоеСвойствоСписокСтрокаПоискаКонтекстноеМеню" id="128"/>
+										<ExtendedTooltip name="ТипКлючевоеСвойствоСписокСтрокаПоискаРасширеннаяПодсказка" id="129"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТипКлючевоеСвойствоСписокСостояниеПросмотра" id="130">
+										<AdditionSource>
+											<Item>ТипКлючевоеСвойствоСписок</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТипКлючевоеСвойствоСписокСостояниеПросмотраКонтекстноеМеню" id="131"/>
+										<ExtendedTooltip name="ТипКлючевоеСвойствоСписокСостояниеПросмотраРасширеннаяПодсказка" id="132"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТипКлючевоеСвойствоСписокУправлениеПоиском" id="133">
+										<AdditionSource>
+											<Item>ТипКлючевоеСвойствоСписок</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТипКлючевоеСвойствоСписокУправлениеПоискомКонтекстноеМеню" id="134"/>
+										<ExtendedTooltip name="ТипКлючевоеСвойствоСписокУправлениеПоискомРасширеннаяПодсказка" id="135"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТипКлючевоеСвойствоСписокЗначение" id="136">
+											<DataPath>ТипКлючевоеСвойствоСписок.Value</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>true</DropListButton>
+											<ContextMenu name="ТипКлючевоеСвойствоСписокЗначениеКонтекстноеМеню" id="137"/>
+											<ExtendedTooltip name="ТипКлючевоеСвойствоСписокЗначениеРасширеннаяПодсказка" id="138"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<CheckBoxField name="СоставнойТип1" id="120">
+					<DataPath>Объект.СоставнойТип</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СоставнойТип1КонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="СоставнойТип1РасширеннаяПодсказка" id="122"/>
+					<Events>
+						<Event name="OnChange">МножественныйСоставПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Фасеты" id="142">
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Фасеты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фасеты</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ФасетыКонтекстноеМеню" id="143"/>
+			<AutoCommandBar name="ФасетыКоманднаяПанель" id="144"/>
+			<ExtendedTooltip name="ФасетыРасширеннаяПодсказка" id="145"/>
+			<SearchStringAddition name="ФасетыСтрокаПоиска" id="146">
+				<AdditionSource>
+					<Item>Фасеты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФасетыСтрокаПоискаКонтекстноеМеню" id="147"/>
+				<ExtendedTooltip name="ФасетыСтрокаПоискаРасширеннаяПодсказка" id="148"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ФасетыСостояниеПросмотра" id="149">
+				<AdditionSource>
+					<Item>Фасеты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФасетыСостояниеПросмотраКонтекстноеМеню" id="150"/>
+				<ExtendedTooltip name="ФасетыСостояниеПросмотраРасширеннаяПодсказка" id="151"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ФасетыУправлениеПоиском" id="152">
+				<AdditionSource>
+					<Item>Фасеты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ФасетыУправлениеПоискомКонтекстноеМеню" id="153"/>
+				<ExtendedTooltip name="ФасетыУправлениеПоискомРасширеннаяПодсказка" id="154"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ФасетыНомерСтроки" id="155">
+					<DataPath>Объект.Фасеты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФасетыНомерСтрокиКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ФасетыНомерСтрокиРасширеннаяПодсказка" id="157"/>
+				</LabelField>
+				<InputField name="ФасетыВидФасета" id="158">
+					<DataPath>Объект.Фасеты.ВидФасета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФасетыВидФасетаКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="ФасетыВидФасетаРасширеннаяПодсказка" id="160"/>
+				</InputField>
+				<InputField name="ФасетыЗначениеФасета" id="161">
+					<DataPath>Объект.Фасеты.ЗначениеФасета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФасетыЗначениеФасетаКонтекстноеМеню" id="162"/>
+					<ExtendedTooltip name="ФасетыЗначениеФасетаРасширеннаяПодсказка" id="163"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<FormattedDocumentField name="ТекстОписания" id="24">
+			<DataPath>ТекстОписания</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Enabled>false</Enabled>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст описания</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТекстОписанияКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ТекстОписанияРасширеннаяПодсказка" id="26"/>
+		</FormattedDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СвойстваФормата</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СвойствоФорматаОбщее" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство формата общее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СвойстваФормата</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектФорматаОбщий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство формата общее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ОбъектыФормата</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстОписания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст описания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипВариант" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип вариант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусСвойства" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус свойства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипФорматаСсылка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип формата ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТипыФормата</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлинаПростогоТипа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длина простого типа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НеограниченнаяДлина" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неограниченная длина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипПростогоТипа" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип простого типа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТочностьПростогоТипа" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точность простого типа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияФормата" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия формата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВерсииФормата</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипКлючевоеСвойство" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ключевое свойство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МножественныйСостав" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Множественный состав</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипФорматаСписок" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип формата список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.ТипыФормата</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТипКлючевоеСвойствоСписок" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ключевое свойство список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="МинимальнаяДлинаСтроки" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Минимальная длина строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВозможноПустое" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возможно пустое</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьОбщееСвойство" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть общее свойство</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть общее свойство</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОбщееСвойство</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

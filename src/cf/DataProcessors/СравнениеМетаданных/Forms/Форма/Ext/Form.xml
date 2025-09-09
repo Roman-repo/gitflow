@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСравнитьКонфигурации" id="26">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СравнитьКонфигурации</CommandName>
+				<ExtendedTooltip name="ФормаСравнитьКонфигурацииРасширеннаяПодсказка" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="НастройкиСравнения" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки сравнения</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="НастройкиСравненияРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="ИсходнаяКонфигурация" id="1">
+					<DataPath>Объект.ИсходнаяКонфигурация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсходнаяКонфигурацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИсходнаяКонфигурацияРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="КонфигурацияСравнения" id="4">
+					<DataPath>Объект.КонфигурацияСравнения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонфигурацияСравненияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="КонфигурацияСравненияРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Конвертация" id="7">
+					<DataPath>Объект.Конвертация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонвертацияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КонвертацияРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="НастройкиОтбора" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="НастройкиОтбораРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<CheckBoxField name="ДобавленныеОбъекты" id="14">
+					<DataPath>ДобавленныеОбъекты</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДобавленныеОбъектыКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДобавленныеОбъектыРасширеннаяПодсказка" id="16"/>
+				</CheckBoxField>
+				<CheckBoxField name="УдаленныеОбъекты" id="17">
+					<DataPath>УдаленныеОбъекты</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УдаленныеОбъектыКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="УдаленныеОбъектыРасширеннаяПодсказка" id="19"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИзмененныеОбъекты" id="20">
+					<DataPath>ИзмененныеОбъекты</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзмененныеОбъектыКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ИзмененныеОбъектыРасширеннаяПодсказка" id="22"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОбъектыСПравилами" id="23">
+					<DataPath>ОбъектыСПравилами</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбъектыСПравиламиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОбъектыСПравиламиРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ДеревоРезультатСравнения" id="30">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДеревоРезультатСравнения</DataPath>
+			<ContextMenu name="ДеревоРезультатСравненияКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="ДеревоРезультатСравненияКоманднаяПанель" id="32">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДеревоРезультатСравненияПерейтиКПравилу" id="66">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПерейтиКПравилу</CommandName>
+						<ExtendedTooltip name="ДеревоРезультатСравненияПерейтиКПравилуРасширеннаяПодсказка" id="67"/>
+					</Button>
+					<Button name="ОбновитьОтбор" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьОтбор</CommandName>
+						<ExtendedTooltip name="ОбновитьОтборРасширеннаяПодсказка" id="29"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоРезультатСравненияРасширеннаяПодсказка" id="33"/>
+			<SearchStringAddition name="ДеревоРезультатСравненияСтрокаПоиска" id="34">
+				<AdditionSource>
+					<Item>ДеревоРезультатСравнения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоРезультатСравненияСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ДеревоРезультатСравненияСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоРезультатСравненияСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>ДеревоРезультатСравнения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоРезультатСравненияСостояниеПросмотраКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="ДеревоРезультатСравненияСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоРезультатСравненияУправлениеПоиском" id="40">
+				<AdditionSource>
+					<Item>ДеревоРезультатСравнения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоРезультатСравненияУправлениеПоискомКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="ДеревоРезультатСравненияУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ДеревоРезультатСравненияПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДеревоРезультатСравненияИсходнаяКонфигурация" id="43">
+					<DataPath>ДеревоРезультатСравнения.ИсходнаяКонфигурация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияИсходнаяКонфигурацияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияИсходнаяКонфигурацияРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ДеревоРезультатСравненияКонфигурацияСравнения" id="46">
+					<DataPath>ДеревоРезультатСравнения.КонфигурацияСравнения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияКонфигурацияСравненияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияКонфигурацияСравненияРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="ДеревоРезультатСравненияРезультатСравнения" id="49">
+					<DataPath>ДеревоРезультатСравнения.РезультатСравнения</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат сравнения</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияРезультатСравненияКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияРезультатСравненияРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<InputField name="ДеревоРезультатСравненияВидИсточника" id="52">
+					<DataPath>ДеревоРезультатСравнения.ВидИсточника</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияВидИсточникаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияВидИсточникаРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ДеревоРезультатСравненияВидПриемника" id="55">
+					<DataPath>ДеревоРезультатСравнения.ВидПриемника</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияВидПриемникаКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияВидПриемникаРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<InputField name="ДеревоРезультатСравненияТипИсточника" id="58">
+					<DataPath>ДеревоРезультатСравнения.ТипИсточника</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияТипИсточникаКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияТипИсточникаРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ДеревоРезультатСравненияТипПриемника" id="61">
+					<DataPath>ДеревоРезультатСравнения.ТипПриемника</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатСравненияТипПриемникаКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ДеревоРезультатСравненияТипПриемникаРасширеннаяПодсказка" id="63"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ТаблицаСравненияТипов" id="68">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаСравненияТипов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаСравненияТиповКонтекстноеМеню" id="69"/>
+			<AutoCommandBar name="ТаблицаСравненияТиповКоманднаяПанель" id="70">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаСравненияТиповРасширеннаяПодсказка" id="71"/>
+			<SearchStringAddition name="ТаблицаСравненияТиповСтрокаПоиска" id="72">
+				<AdditionSource>
+					<Item>ТаблицаСравненияТипов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСравненияТиповСтрокаПоискаКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="ТаблицаСравненияТиповСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаСравненияТиповСостояниеПросмотра" id="75">
+				<AdditionSource>
+					<Item>ТаблицаСравненияТипов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСравненияТиповСостояниеПросмотраКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="ТаблицаСравненияТиповСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаСравненияТиповУправлениеПоиском" id="78">
+				<AdditionSource>
+					<Item>ТаблицаСравненияТипов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСравненияТиповУправлениеПоискомКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ТаблицаСравненияТиповУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаСравненияТиповДобавленныеТипы" id="81">
+					<DataPath>ТаблицаСравненияТипов.ТипИсточника</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавленные типы</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСравненияТиповДобавленныеТипыКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ТаблицаСравненияТиповДобавленныеТипыРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="ТаблицаСравненияТиповУдаленныеТипы" id="84">
+					<DataPath>ТаблицаСравненияТипов.ТипПриемника</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаленные типы</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСравненияТиповУдаленныеТипыКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ТаблицаСравненияТиповУдаленныеТипыРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="ТаблицаСравненияТиповИмяТипаИсточника" id="87">
+					<DataPath>ТаблицаСравненияТипов.ИмяТипаИсточника</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСравненияТиповИмяТипаИсточникаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ТаблицаСравненияТиповИмяТипаИсточникаРасширеннаяПодсказка" id="89"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.СравнениеМетаданных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДобавленныеОбъекты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавленные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УдаленныеОбъекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаленные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзмененныеОбъекты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Измененные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектыСПравилами" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты для которых есть правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоРезультатСравнения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево результат сравнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИсходнаяКонфигурация" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходная конфигурация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Значения</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Свойства</v8:Type>
+						<v8:Type>cfg:CatalogRef.Объекты</v8:Type>
+						<v8:Type>cfg:EnumRef.ТипыОбъектов</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонфигурацияСравнения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конфигурация сравнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Значения</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Свойства</v8:Type>
+						<v8:Type>cfg:CatalogRef.Объекты</v8:Type>
+						<v8:Type>cfg:EnumRef.ТипыОбъектов</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РезультатСравнения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат сравнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидИсточника" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид источника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидПриемника" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид приемника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипИсточника" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип источника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыОбъектов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПриемника" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип приемника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыОбъектов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаСравненияТипов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица сравнения типов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТипИсточника" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип источника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Объекты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПриемника" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип приемника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Объекты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяТипаИсточника" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя типа источника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПолныйРезультатСравнения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полный результат сравнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ДеревоРезультатСравнения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРезультатСравненияИсходнаяКонфигурация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРезультатСравнения.РезультатСравнения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ДобавленныйРеквизитФон</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ДеревоРезультатСравнения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРезультатСравненияИсходнаяКонфигурация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРезультатСравнения.РезультатСравнения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:УдаленныйРеквизитФон</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>ДеревоРезультатСравнения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРезультатСравненияИсходнаяКонфигурация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРезультатСравнения.РезультатСравнения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ИзмененноеЗначениеРеквизитаФон</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СравнитьКонфигурации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить конфигурации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СравнитьКонфигурации</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьОтбор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьОтбор</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПерейтиКПравилу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к правилу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к правилу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Setting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиКПравилу</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ПодменюСохранитьМодуль" id="12">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить модуль менеджера обмена</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подменю сохранить модуль</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+				<ExtendedTooltip name="ПодменюСохранитьМодульРасширеннаяПодсказка" id="13"/>
+				<ChildItems>
+					<Button name="ФормаВыгрузить" id="7">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Выгрузить</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>На текущий момент</v8:content>
+							</v8:item>
+						</Title>
+						<RepresentationInContextMenu>None</RepresentationInContextMenu>
+						<ExtendedTooltip name="ФормаВыгрузитьРасширеннаяПодсказка" id="8"/>
+					</Button>
+					<Button name="ФормаВыгрузить_Хранилище" id="14">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Выгрузить_Хранилище</CommandName>
+						<RepresentationInContextMenu>None</RepresentationInContextMenu>
+						<ExtendedTooltip name="ФормаВыгрузить_ХранилищеРасширеннаяПодсказка" id="15"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаВыгрузитьБезСовместнойРаботы" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Выгрузить_Хранилище</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить модуль менеджера обмена</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTipRepresentation>Button</ToolTipRepresentation>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<ExtendedTooltip name="ФормаВыгрузитьБезСовместнойРаботыРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Конвертация" id="1">
+			<DataPath>Объект.Конвертация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChoiceParameters>
+				<app:item name="Отбор.ТипКонвертации">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыКонвертаций.EnumValue.XDTO</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="КонвертацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КонвертацияРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">КонвертацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="ДекорацияПодсказка" id="18">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="20"/>
+		</LabelDecoration>
+		<CheckBoxField name="ВыгрузкаДляРасширенногоСинтаксическогоКонтроля" id="9">
+			<DataPath>Объект.ВыгрузкаДляРасширенногоСинтаксическогоКонтроля</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получаемый код формируется только для выполнения расширенного синтаксического контроля алгоритмов конвертации.
+Использование данного кода в конфигурации приведет к ошибкам при выполнении обмена данными.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыгрузкаДляРасширенногоСинтаксическогоКонтроляКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВыгрузкаДляРасширенногоСинтаксическогоКонтроляРасширеннаяПодсказка" id="11"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВыгрузкаМодуля</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выгрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Выгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выгрузить_Хранилище" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По состоянию хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Выгрузить_Хранилище</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="парКонвертация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Конвертации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

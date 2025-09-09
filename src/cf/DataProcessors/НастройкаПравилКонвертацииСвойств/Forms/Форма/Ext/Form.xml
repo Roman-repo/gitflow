@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаАвтосопоставление" id="32">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Автосопоставление</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Автоматическое сопоставление</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаАвтосопоставлениеРасширеннаяПодсказка" id="33"/>
+			</Button>
+			<Button name="ФормаСоздатьПравилаКонвертацииСвойств" id="34">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СоздатьПКС</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьПравилаКонвертацииСвойствРасширеннаяПодсказка" id="35"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПравилоКонвертацииОбъекта" id="1">
+			<DataPath>Объект.ПравилоКонвертацииОбъекта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПравилоКонвертацииОбъектаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПравилоКонвертацииОбъектаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<RadioButtonField name="ВариантОтображения" id="36">
+			<DataPath>ВариантОтображения</DataPath>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не сопоставленные свойства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сопоставленные свойства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Все свойства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВариантОтображенияКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ВариантОтображенияРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="OnChange">ВариантОтображенияПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<Table name="СопоставлениеСвойств" id="7">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СопоставлениеСвойств</DataPath>
+			<RowPictureDataPath>Объект.СопоставлениеСвойств.Сопоставлено</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставление свойств</v8:content>
+				</v8:item>
+			</Title>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СопоставлениеСвойствКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="СопоставлениеСвойствКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СопоставлениеСвойствРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="СопоставлениеСвойствСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>СопоставлениеСвойств</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СопоставлениеСвойствСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="СопоставлениеСвойствСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СопоставлениеСвойствСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>СопоставлениеСвойств</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СопоставлениеСвойствСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СопоставлениеСвойствСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СопоставлениеСвойствУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>СопоставлениеСвойств</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СопоставлениеСвойствУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СопоставлениеСвойствУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeRowChange">СопоставлениеСвойствПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="СопоставлениеСвойствСоздатьПравило" id="11">
+					<DataPath>Объект.СопоставлениеСвойств.СоздатьПравило</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создать</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СопоставлениеСвойствСоздатьПравилоКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="СопоставлениеСвойствСоздатьПравилоРасширеннаяПодсказка" id="13"/>
+				</CheckBoxField>
+				<InputField name="СопоставлениеСвойствСвойствоКонфигурации" id="14">
+					<DataPath>Объект.СопоставлениеСвойств.СвойствоКонфигурации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство конфигурации</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>true</DropListButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="СопоставлениеСвойствСвойствоКонфигурацииКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СопоставлениеСвойствСвойствоКонфигурацииРасширеннаяПодсказка" id="16"/>
+					<Events>
+						<Event name="ChoiceProcessing">СопоставлениеСвойствСвойствоКонфигурацииОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СопоставлениеСвойствСвойствоФормата" id="17">
+					<DataPath>Объект.СопоставлениеСвойств.СвойствоФормата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="СопоставлениеСвойствСвойствоФорматаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СопоставлениеСвойствСвойствоФорматаРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="ChoiceProcessing">СопоставлениеСвойствСвойствоФорматаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СопоставлениеСвойствСвойствоКонфигурацииКорреспондента" id="48">
+					<DataPath>Объект.СопоставлениеСвойств.СвойствоКонфигурацииКорреспондента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатель</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>true</DropListButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="СопоставлениеСвойствСвойствоКонфигурацииКорреспондентаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СопоставлениеСвойствСвойствоКонфигурацииКорреспондентаРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="ChoiceProcessing">СопоставлениеСвойствСвойствоКонфигурацииКорреспондентаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СопоставлениеСвойствТипСвойстваКонфигурации" id="20">
+					<DataPath>Объект.СопоставлениеСвойств.ТипСвойстваКонфигурации</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставлениеСвойствТипСвойстваКонфигурацииКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СопоставлениеСвойствТипСвойстваКонфигурацииРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СопоставлениеСвойствТипСвойстваФормата" id="23">
+					<DataPath>Объект.СопоставлениеСвойств.ТипСвойстваФормата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставлениеСвойствТипСвойстваФорматаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СопоставлениеСвойствТипСвойстваФорматаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="СопоставлениеСвойствТипСвойстваКонфигурацииКорреспондента" id="51">
+					<DataPath>Объект.СопоставлениеСвойств.ТипСвойстваКонфигурацииКорреспондента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип получателя</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставлениеСвойствТипСвойстваКонфигурацииКорреспондентаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="СопоставлениеСвойствТипСвойстваКонфигурацииКорреспондентаРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="СопоставлениеСвойствПравилоКонвертации" id="26">
+					<DataPath>Объект.СопоставлениеСвойств.ПравилоКонвертации</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставлениеСвойствПравилоКонвертацииКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СопоставлениеСвойствПравилоКонвертацииРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="СопоставлениеСвойствПоиск" id="29">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СопоставлениеСвойствПоискКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СопоставлениеСвойствПоискРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НастройкаПравилКонвертацииСвойств</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокСвойствКонфигурации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="СписокСвойствФормата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств формата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ВариантОтображения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокСвойствКонфигурацииКорреспондента" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств конфигурации корреспондента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ЭтоКонвертацияXDTO" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это конвертация XDTO</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Автосопоставление" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автосопоставление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автосопоставление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Автосопоставление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьПКС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать правила конвертации свойств</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ПКС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПКС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПравилоКонвертацииОбъекта">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаКонвертацииОбъектов</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

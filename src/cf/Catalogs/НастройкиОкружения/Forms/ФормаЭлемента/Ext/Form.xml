@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВидКопии" id="34">
+			<DataPath>Объект.ВидКопии</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВидКопииКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ВидКопииРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="СистемаИсточник" id="7">
+			<DataPath>Объект.СистемаИсточник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СистемаИсточникКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СистемаИсточникРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="РепозиторийИсточник" id="37">
+			<DataPath>Объект.РепозиторийИсточник</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РепозиторийИсточникКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="РепозиторийИсточникРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="ВеткаИсточник" id="43">
+			<DataPath>Объект.РасширенияИсточник</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВеткаИсточникКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ВеткаИсточникРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="ОткудаЗабратьБазуИсточник" id="16">
+			<DataPath>Объект.ОткудаЗабратьБазуИсточник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОткудаЗабратьБазуИсточникКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОткудаЗабратьБазуИсточникРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="КудаПоложитьБазуИсточник" id="19">
+			<DataPath>Объект.КудаПоложитьБазуИсточник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КудаПоложитьБазуИсточникКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КудаПоложитьБазуИсточникРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<CheckBoxField name="Интеграция" id="31">
+			<DataPath>Объект.Интеграция</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИнтеграцияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ИнтеграцияРасширеннаяПодсказка" id="33"/>
+		</CheckBoxField>
+		<InputField name="СистемаПриемник" id="10">
+			<DataPath>Объект.СистемаПриемник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СистемаПриемникКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СистемаПриемникРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="РепозиторийПриемник" id="40">
+			<DataPath>Объект.РепозиторийПриемник</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РепозиторийПриемникКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="РепозиторийПриемникРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ВеткаПриемник" id="46">
+			<DataPath>Объект.РасширенияПриемник</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВеткаПриемникКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ВеткаПриемникРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="НастройкаИнтеграции" id="13">
+			<DataPath>Объект.НастройкаИнтеграции</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НастройкаИнтеграцииКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НастройкаИнтеграцииРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ОткудаЗабратьБазуПриемник" id="22">
+			<DataPath>Объект.ОткудаЗабратьБазуПриемник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОткудаЗабратьБазуПриемникКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ОткудаЗабратьБазуПриемникРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="КудаПоложитьБазуПриемник" id="25">
+			<DataPath>Объект.КудаПоложитьБазуПриемник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КудаПоложитьБазуПриемникКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="КудаПоложитьБазуПриемникРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Владелец" id="28">
+			<DataPath>Объект.Принадлежность</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиОкружения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

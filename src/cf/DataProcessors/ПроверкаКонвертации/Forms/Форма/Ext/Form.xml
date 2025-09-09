@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверить" id="4">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Проверить</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьРасширеннаяПодсказка" id="5"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИсходныеДанные" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа исходные данные</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИсходныеДанныеРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<InputField name="Конвертация" id="1">
+					<DataPath>Объект.Конвертация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="КонвертацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КонвертацияРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">КонвертацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПланОбмена" id="61">
+					<DataPath>ПланОбмена</DataPath>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ПланОбменаКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ПланОбменаРасширеннаяПодсказка" id="63"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиПроверки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиПроверкиРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИсточникПриемник" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка источника и приемника правил</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИсточникПриемникРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<CheckBoxField name="ИсточникПриемникПометкаУдаления" id="10">
+							<DataPath>ИсточникПриемникПометкаУдаления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Источник или приемник помечены на удаление</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсточникПриемникПометкаУдаленияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ИсточникПриемникПометкаУдаленияРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">ИсточникПриемникПометкаУдаленияПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИсточникПриемникСПрефиксомУдалить" id="13">
+							<DataPath>ИсточникПриемникСПрефиксомУдалить</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Источник или приемник с префиксом Удалить</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсточникПриемникСПрефиксомУдалитьКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ИсточникПриемникСПрефиксомУдалитьРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">ИсточникПриемникСПрефиксомУдалитьПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ПомечатьНаУдалениеНекорректныеПравила" id="16">
+							<DataPath>ПомечатьНаУдалениеНекорректныеПравила</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПомечатьНаУдалениеНекорректныеПравилаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПомечатьНаУдалениеНекорректныеПравилаРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПроверкаТиповИсточникаИПриемника" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка типов источника и приемника в ПКС</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ПроверкаТиповИсточникаИПриемникаРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<CheckBoxField name="ПКСУказаноПКОИМножественныйТипИсточника" id="21">
+							<DataPath>ПКСУказаноПКОИМножественныйТипИсточника</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПКСУказаноПКОИМножественныйТипИсточникаКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ПКСУказаноПКОИМножественныйТипИсточникаРасширеннаяПодсказка" id="23"/>
+							<Events>
+								<Event name="OnChange">ПКСУказаноПКОИМножественныйТипИсточникаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ПКСУказаноПКОИМножественныйТипПриемника" id="24">
+							<DataPath>ПКСУказаноПКОИМножественныйТипПриемника</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПКСУказаноПКОИМножественныйТипПриемникаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ПКСУказаноПКОИМножественныйТипПриемникаРасширеннаяПодсказка" id="26"/>
+							<Events>
+								<Event name="OnChange">ПКСУказаноПКОИМножественныйТипПриемникаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ПКСУказаноПКОИТипыОтличаются" id="27">
+							<DataPath>ПКСУказаноПКОИТипыОтличаются</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПКСУказаноПКОИТипыОтличаютсяКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПКСУказаноПКОИТипыОтличаютсяРасширеннаяПодсказка" id="29"/>
+							<Events>
+								<Event name="OnChange">ПКСУказаноПКОИТипыОтличаютсяПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ОчищатьПКОВОшибочныхПКС" id="64">
+							<DataPath>ОчищатьПКОВОшибочныхПКС</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОчищатьПКОВОшибочныхПКСКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ОчищатьПКОВОшибочныхПКСРасширеннаяПодсказка" id="66"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПКПД" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка правил конвертации значений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ПКПД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаПКПДРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<CheckBoxField name="ИмеютсяНеСопоставленныеЗначения" id="69">
+							<DataPath>ИмеютсяНеСопоставленныеЗначения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИмеютсяНеСопоставленныеЗначенияКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ИмеютсяНеСопоставленныеЗначенияРасширеннаяПодсказка" id="71"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодпискиИПланОбмена" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка состава ПО и подписок на событие</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаПодпискиИПланОбменаРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<CheckBoxField name="ИсточникНеВходитВПланОбмена" id="53">
+							<DataPath>ИсточникНеВходитВПланОбмена</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсточникНеВходитВПланОбменаКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ИсточникНеВходитВПланОбменаРасширеннаяПодсказка" id="55"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИсточникНеВходитВПодпискуНаСобытие" id="56">
+							<DataPath>ИсточникНеВходитВПодпискуНаСобытие</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсточникНеВходитВПодпискуНаСобытиеКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ИсточникНеВходитВПодпискуНаСобытиеРасширеннаяПодсказка" id="58"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="РезультатПроверки" id="30">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>РезультатПроверки</DataPath>
+			<ContextMenu name="РезультатПроверкиКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="РезультатПроверкиКоманднаяПанель" id="32">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="РезультатПроверкиПерейтиКПравилу" id="49">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПерейтиКПравилу</CommandName>
+						<ExtendedTooltip name="РезультатПроверкиПерейтиКПравилуРасширеннаяПодсказка" id="50"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РезультатПроверкиРасширеннаяПодсказка" id="33"/>
+			<SearchStringAddition name="РезультатПроверкиСтрокаПоиска" id="34">
+				<AdditionSource>
+					<Item>РезультатПроверки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатПроверкиСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="РезультатПроверкиСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатПроверкиСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>РезультатПроверки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатПроверкиСостояниеПросмотраКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="РезультатПроверкиСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатПроверкиУправлениеПоиском" id="40">
+				<AdditionSource>
+					<Item>РезультатПроверки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатПроверкиУправлениеПоискомКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="РезультатПроверкиУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РезультатПроверкиОбъект" id="43">
+					<DataPath>РезультатПроверки.Объект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="РезультатПроверкиОбъектКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="РезультатПроверкиОбъектРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="РезультатПроверкиИнформация" id="46">
+					<DataPath>РезультатПроверки.Информация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатПроверкиИнформацияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="РезультатПроверкиИнформацияРасширеннаяПодсказка" id="48"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПроверкаКонвертации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РезультатПроверки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаКонвертацииПредопределенныхДанных</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПравилаКонвертацииОбъектов</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПравилаКонвертацииСвойств</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПравилаОбработкиДанных</v8:Type>
+						<v8:Type>cfg:CatalogRef.Объекты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Информация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИсточникПриемникПометкаУдаления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник приемник пометка удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникПриемникСПрефиксомУдалить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник приемник пометка удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПомечатьНаУдалениеНекорректныеПравила" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помечать на удаление некорректные правила</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПКСУказаноПКОИМножественныйТипИсточника" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указано ПКО и множественный тип источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПКСУказаноПКОИМножественныйТипПриемника" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указано ПКО и множественный тип приемника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПКСУказаноПКОИТипыОтличаются" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указано ПКО и типы источника и приемника отличаются</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоКонвертацияXDTO" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это конвертация XDTO</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникНеВходитВПланОбмена" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект ПОД не входит в план обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникНеВходитВПодпискуНаСобытие" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект ПОД не входит в подписку на событие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПланОбмена" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Объекты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчищатьПКОВОшибочныхПКС" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очищать ПКО в некорректных правилах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмеютсяНеСопоставленныеЗначения" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имеются не сопоставленные значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Проверить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Проверить</Action>
+		</Command>
+		<Command name="ПерейтиКПравилу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к объекту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к правилу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Администрирование</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПерейтиКПравилу</Action>
+		</Command>
+	</Commands>
+</Form>
